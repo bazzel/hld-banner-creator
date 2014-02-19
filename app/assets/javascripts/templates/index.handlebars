@@ -1,0 +1,56 @@
+<form>
+  <div class="row">
+    <div class="small-4 columns">
+      <label for="app-open-method" class="right">How to open the application:</label>
+    </div>
+    <div class="small-8 columns">
+      {{view Ember.Select content=appOpenMethods value=appOpenMethod id='app-open-method'}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-4 columns">
+      <label for="product-open-method" class="right">How to open the product information:</label>
+    </div>
+    <div class="small-8 columns">
+      {{view Ember.Select content=productOpenMethods value=productOpenMethod id='product-open-method'}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-4 columns">
+      <label for="ctn" class="right">If you want to open with a specific luminaire, give here the CTN:</label>
+    </div>
+    <div class="small-8 columns">
+      {{input value=ctn id='ctn'}}
+    </div>
+  </div>
+  {{#unless hideAdvancedSettings}}
+  <div class="row">
+    <div class="small-4 columns">
+      <label for="max-width-overlay" class="right">Maximum width of the overlay:</label>
+    </div>
+    <div class="small-8 columns">
+      {{input value=maxWidthOverlay type='range' min='100' max='1200'}} ({{maxWidthOverlay}})
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-4 columns">
+      <label for="max-height-overlay" class="right">Maximum height of the overlay:</label>
+    </div>
+    <div class="small-8 columns">
+      {{input value=maxHeightOverlay type='range' min='100' max='1200'}} ({{maxHeightOverlay}})
+    </div>
+  </div>
+  {{/unless}}
+</form>
+
+<div class='row'>
+  <div class="small-8 small-offset-4 columns">
+    <div class="panel">
+      <code>{{code}}</code>
+    </div>
+  </div>
+</div>
+
+<iframe width="100%" height="800" name="example" src="live-example.html">
+
+</iframe>
