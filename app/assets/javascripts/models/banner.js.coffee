@@ -1,4 +1,5 @@
 App.Banner = Ember.Object.extend
+  title: 'Sukkel'
   appOpenMethod: 'auto'
   appOpenMethods: ['auto', 'new_tab', 'overlay']
   productOpenMethod: 'default'
@@ -33,8 +34,8 @@ App.Banner = Ember.Object.extend
       "data-ctn=\"#{ctn}\""
   ).property('ctn')
   dataMaxWidthOverlay: (->
-    "data-max-overlay-width=\"#{@get('maxWidthOverlay')}\""
+    "data-max-overlay-width=\"#{@get('maxWidthOverlay')}px\""
   ).property('maxWidthOverlay')
   dataMaxHeightOverlay: (->
-    "data-max-overlay-height=\"#{@get('maxHeightOverlay')}\""
+    "data-max-overlay-height=\"#{@get('maxHeightOverlay')}px\""
   ).property('maxHeightOverlay')
